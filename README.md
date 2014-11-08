@@ -1,6 +1,0 @@
-learningtong
-============
-
-some
-
-hello
