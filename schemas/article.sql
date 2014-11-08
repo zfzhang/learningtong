@@ -1,0 +1,101 @@
+DROP TABLE IF EXISTS news;
+CREATE TABLE news
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	status      INT NOT NULL DEFAULT 0,
+	agency_id   INT NOT NULL DEFAULT 0,
+	read_count  INT NOT NULL DEFAULT 0,
+	show_type   INT NOT NULL DEFAULT 0,
+	created_by  INT NOT NULL DEFAULT 0,
+	modified_by INT NOT NULL DEFAULT 0,
+	created_at  DATETIME NOT NULL DEFAULT 0,
+	modified_at DATETIME NOT NULL DEFAULT 0,
+	title       VARCHAR(255) NOT NULL DEFAULT '',
+	src         VARCHAR(255) NOT NULL DEFAULT '',
+	remark      VARCHAR(255) NOT NULL DEFAULT '',
+	img         VARCHAR(255) NOT NULL DEFAULT '',
+	content text,
+	KEY agency_id(agency_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS daily_news;
+CREATE TABLE daily_news
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	agency_id   INT NOT NULL DEFAULT 0,
+	status      INT NOT NULL DEFAULT 0,
+	read_count  INT NOT NULL DEFAULT 0,
+	created_by  INT NOT NULL DEFAULT 0,
+	modified_by INT NOT NULL DEFAULT 0,
+	created_at  DATETIME NOT NULL DEFAULT 0,
+	modified_at DATETIME NOT NULL DEFAULT 0,
+	title       VARCHAR(255) NOT NULL DEFAULT '',
+	src         VARCHAR(255) NOT NULL DEFAULT '',
+	remark      VARCHAR(255) NOT NULL DEFAULT '',
+	img         VARCHAR(255) NOT NULL DEFAULT '',
+	content text,
+	KEY agency_id(agency_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS articles;
+CREATE TABLE articles
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	agency_id   INT NOT NULL DEFAULT 0,
+	status      INT NOT NULL DEFAULT 0,
+	read_count  INT NOT NULL DEFAULT 0,
+	created_by  INT NOT NULL DEFAULT 0,
+	modified_by INT NOT NULL DEFAULT 0,
+	created_at  DATETIME NOT NULL DEFAULT 0,
+	modified_at DATETIME NOT NULL DEFAULT 0,
+	title       VARCHAR(255) NOT NULL DEFAULT '',
+	src         VARCHAR(255) NOT NULL DEFAULT '',
+	remark      VARCHAR(255) NOT NULL DEFAULT '',
+	img         VARCHAR(255) NOT NULL DEFAULT '',
+	content text,
+	KEY agency_id(agency_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS introductions;
+CREATE TABLE introductions
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	agency_id INT NOT NULL DEFAULT 0,
+	content text,
+	KEY agency_id(agency_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS contacts;
+CREATE TABLE contacts
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	agency_id INT NOT NULL DEFAULT 0,
+	content text,
+	KEY agency_id(agency_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS teachers;
+CREATE TABLE teachers
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	agency_id INT NOT NULL DEFAULT 0,
+	content text,
+	KEY agency_id(agency_id)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS images;
+CREATE TABLE images
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	agency_id   INT NOT NULL DEFAULT 0,
+	status      INT NOT NULL DEFAULT 0,
+	category_id INT NOT NULL DEFAULT 0,
+	filesize    INT NOT NULL DEFAULT 0,
+	created_by  INT NOT NULL DEFAULT 0,
+	modified_by INT NOT NULL DEFAULT 0,
+	created_at  DATETIME NOT NULL DEFAULT 0,
+	modified_at DATETIME NOT NULL DEFAULT 0,
+	title       VARCHAR(255) NOT NULL DEFAULT '',
+	url         VARCHAR(255) NOT NULL DEFAULT '',
+	realpath    VARCHAR(255) NOT NULL DEFAULT ''
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

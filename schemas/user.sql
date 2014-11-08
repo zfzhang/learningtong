@@ -1,0 +1,159 @@
+DROP TABLE IF EXISTS admins;
+CREATE TABLE admins
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	username  VARCHAR(100) NOT NULL DEFAULT '',
+	password  VARCHAR(100) NOT NULL DEFAULT '',
+	status    INT NOT NULL DEFAULT 0,
+	nickname  VARCHAR(100) NOT NULL DEFAULT '',
+	realname  VARCHAR(100) NOT NULL DEFAULT '',
+	mobile    VARCHAR(20)  NOT NULL DEFAULT '',
+	email     VARCHAR(50)  NOT NULL DEFAULT '',
+	created_at  DATETIME NOT NULL DEFAULT 0,
+	modified_at DATETIME NOT NULL DEFAULT 0,
+	UNIQUE username(username)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	status      INT NOT NULL DEFAULT 0,
+	agency_id   INT NOT NULL DEFAULT 0,
+	role_id     VARCHAR(100) NOT NULL DEFAULT '',
+	created_by  INT NOT NULL DEFAULT 0,
+	modified_by INT NOT NULL DEFAULT 0,
+	created_at  DATETIME NOT NULL DEFAULT 0,
+	modified_at DATETIME NOT NULL DEFAULT 0,
+	username  VARCHAR(100) NOT NULL DEFAULT '',
+	password  VARCHAR(100) NOT NULL DEFAULT '',
+	weixin    VARCHAR(100) NOT NULL DEFAULT '',
+	nickname  VARCHAR(100) NOT NULL DEFAULT '',
+	realname  VARCHAR(100) NOT NULL DEFAULT '',
+	mobile    VARCHAR(20)  NOT NULL DEFAULT '',
+	email     VARCHAR(50)  NOT NULL DEFAULT '',
+	wx_appid  VARCHAR(100) NOT NULL DEFAULT '',
+	wx_openid VARCHAR(100) NOT NULL DEFAULT '',
+	remark    VARCHAR(255) NOT NULL DEFAULT '',
+	KEY wx_openid(wx_openid)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS students;
+CREATE TABLE students
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	status    INT NOT NULL DEFAULT 0,
+	agency_id INT NOT NULL DEFAULT 0,
+	entity_id INT NOT NULL DEFAULT 0,
+	school_id INT NOT NULL DEFAULT 0,
+	grade_id  INT NOT NULL DEFAULT 0,
+	signup_by INT NOT NULL DEFAULT 0,
+	sex       INT NOT NULL DEFAULT 0,
+	province  INT NOT NULL DEFAULT 0,
+	city      INT NOT NULL DEFAULT 0,
+	area	  INT NOT NULL DEFAULT 0,
+	created_by  INT NOT NULL DEFAULT 0,
+	modified_by INT NOT NULL DEFAULT 0,
+	created_at  DATETIME NOT NULL DEFAULT 0,
+	modified_at DATETIME NOT NULL DEFAULT 0,
+	realname  VARCHAR(50)  NOT NULL DEFAULT '',
+	birthday  VARCHAR(50)  NOT NULL DEFAULT '',
+	mobile    VARCHAR(20)  NOT NULL DEFAULT '',
+	email     VARCHAR(50)  NOT NULL DEFAULT '',
+	QQ        VARCHAR(30)  NOT NULL DEFAULT '',
+	father_name   VARCHAR(50)  NOT NULL DEFAULT '',
+	father_mobile VARCHAR(20)  NOT NULL DEFAULT '',
+	mother_name   VARCHAR(50)  NOT NULL DEFAULT '',
+	mother_mobile VARCHAR(20)  NOT NULL DEFAULT '',
+	wx_openid VARCHAR(100) NOT NULL DEFAULT '',
+	addr      VARCHAR(255) NOT NULL DEFAULT '',
+	remark    VARCHAR(255)  NOT NULL DEFAULT '',
+	KEY entity_id(entity_id),
+	KEY wx_openid(wx_openid)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS guests;
+CREATE TABLE guests
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	status      INT NOT NULL DEFAULT 0,
+	agency_id   INT NOT NULL DEFAULT 0,
+	entity_id   INT NOT NULL DEFAULT 0,
+	student_id  INT NOT NULL DEFAULT 0,
+	signup_by   INT NOT NULL DEFAULT 0,
+	sex         INT NOT NULL DEFAULT 0,
+	school_id   INT NOT NULL DEFAULT 0,
+	grade_id    INT NOT NULL DEFAULT 0,
+	province    INT NOT NULL DEFAULT 0,
+	city        INT NOT NULL DEFAULT 0,
+	area	    INT NOT NULL DEFAULT 0,
+	created_by  INT NOT NULL DEFAULT 0,
+	modified_by INT NOT NULL DEFAULT 0,
+	created_at  DATETIME NOT NULL DEFAULT 0,
+	modified_at DATETIME NOT NULL DEFAULT 0,
+	wx_openid   VARCHAR(100) NOT NULL DEFAULT '',
+	realname    VARCHAR(50)  NOT NULL DEFAULT '',
+	birthday    VARCHAR(50)  NOT NULL DEFAULT '',
+	mobile      VARCHAR(20)  NOT NULL DEFAULT '',
+	email       VARCHAR(50)  NOT NULL DEFAULT '',
+	QQ          VARCHAR(30)  NOT NULL DEFAULT '',
+	father_name   VARCHAR(50)  NOT NULL DEFAULT '',
+	father_mobile VARCHAR(20)  NOT NULL DEFAULT '',
+	mother_name   VARCHAR(50)  NOT NULL DEFAULT '',
+	mother_mobile VARCHAR(20)  NOT NULL DEFAULT '',
+	addr       VARCHAR(255) NOT NULL DEFAULT '',
+	remark     VARCHAR(255)  NOT NULL DEFAULT '',
+	KEY agency_id(agency_id),
+	KEY wx_openid(wx_openid)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS wx_users;
+CREATE TABLE wx_users
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	student_id  INT NOT NULL DEFAULT 0,
+	sex         INT NOT NULL DEFAULT 0,
+	created_at  DATETIME NOT NULL DEFAULT 0,
+	modified_at DATETIME NOT NULL DEFAULT 0,
+	openid      VARCHAR(100) NOT NULL DEFAULT '',
+	nickname    VARCHAR(255) NOT NULL DEFAULT '',
+	province    VARCHAR(100) NOT NULL DEFAULT '',
+	city        VARCHAR(100) NOT NULL DEFAULT '',
+	country     VARCHAR(100) NOT NULL DEFAULT '',
+	headimgurl  VARCHAR(255) NOT NULL DEFAULT '',
+	privilege  TEXT,
+	KEY student_id(student_id),
+	KEY wx_openid(openid)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS student_valid;
+CREATE TABLE student_valid
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	agency_id   INT NOT NULL DEFAULT 0,
+	student_id  INT NOT NULL DEFAULT 0,
+	created_at  DATETIME NOT NULL DEFAULT 0,
+	expired_at  DATETIME NOT NULL DEFAULT 0,
+	code        VARCHAR(20) NOT NULL DEFAULT '',
+	KEY code(code)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS wx_students;
+CREATE TABLE wx_students
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	wx_openid  VARCHAR(100) NOT NULL DEFAULT '',
+	student_id INT NOT NULL DEFAULT 0,
+	KEY wx_openid(wx_openid)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS user_rights;
+CREATE TABLE user_rights
+(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	user_id  INT NOT NULL DEFAULT 0,
+	content  TEXT
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO users(agency_id,role_id,username,password) VALUES(1, 4, 'admin',  'e10adc3949ba59abbe56e057f20f883e');
+INSERT INTO admins(username, password, realname, mobile) VALUES('xuexintong', 'e10adc3949ba59abbe56e057f20f883e', '张志富', '18676660082');
