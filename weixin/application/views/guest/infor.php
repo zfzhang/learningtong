@@ -64,7 +64,7 @@
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">学生姓名</label>
-						<input type="text" placeholder="填写您的姓名" name="realname" id="realname" value="<?php echo $item['realname']?>" datatype="zh2-4" nullmsg="请输入姓名！" errormsg="请输入真实姓名！">
+						<input type="text" class="null-check" placeholder="填写您的姓名" name="realname" id="realname" value="<?php echo $item['realname']?>" datatype="zh2-4" nullmsg="请输入姓名！" errormsg="请输入真实姓名！">
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">性别</label>
@@ -78,11 +78,11 @@
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">出生日期</label>
-						<input type="text" class="text-color" placeholder="格式：19990101" name="birthday" id="birthday" value="<?php echo $item['birthday']?>"  datatype="n" nullmsg="请输入出生日期！" errormsg="请输入出生日期！">
+						<input type="text" class="text-color null-check" placeholder="格式：19990101" name="birthday" id="birthday" value="<?php echo $item['birthday']?>"  datatype="n" nullmsg="请输入出生日期！" errormsg="请输入出生日期！">
 					</div>
 					<div class="mui-input-row mui-select">
 						<label class="title-color">报名机构</label>
-						<select name="entity_id" id="entity_id" datatype="*" class="text-color">
+						<select name="entity_id" id="entity_id" datatype="*" class="text-color null-check">
 							<option value=""></option>
 							<?php foreach ( $entities as $v ):?>
 							<option value="<?php echo $v['id']?>" <?php if ( $item['entity_id'] == $v['id'] ) echo 'selected="selected"' ?> >
@@ -93,7 +93,7 @@
 					</div>
 					<div class="mui-input-row mui-select">
 						<label class="title-color">所在学校</label>
-						<select name="school_id" id="school_id" datatype="*" class="text-color">
+						<select name="school_id" id="school_id" datatype="*" class="text-color null-check">
 							<option value=""></option>
 							<?php foreach ( $schools as $v ):?>
 							<option value="<?php echo $v['id']?>" <?php if ( $item['school_id'] == $v['id'] ) echo 'selected="selected"' ?> >
@@ -104,7 +104,7 @@
 					</div>
 					<div class="mui-input-row mui-select">
 						<label class="title-color">所在班级</label>
-						<select name="grade_id" id="grade_id" datatype="*" class="class-color">
+						<select name="grade_id" id="grade_id" datatype="*" class="class-color null-check">
 							<option value=""></option>
 							<?php foreach ( $grades as $v ):?>
 							<option value="<?php echo $v['id']?>" <?php if ( $item['grade_id'] == $v['id'] ) echo 'selected="selected"' ?>>
@@ -119,19 +119,19 @@
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">父亲姓名</label>
-						<input type="text" class="text-color" placeholder="填写父亲姓名" name="father_name" id="father_name" value="<?php echo $item['father_name']?>" datatype="zh2-4" nullmsg="请输入姓名！" errormsg="请输入真实姓名！">
+						<input type="text" class="text-color null-check" placeholder="填写父亲姓名" name="father_name" id="father_name" value="<?php echo $item['father_name']?>" datatype="zh2-4" nullmsg="请输入姓名！" errormsg="请输入真实姓名！">
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">父亲号码</label>
-						<input type="text" class="text-color" placeholder="填写父亲号码" name="father_mobile" id="father_mobile" value="<?php echo $item['father_mobile']?>" datatype="m" errormsg="请输入正确的手机号！">
+						<input type="text" class="text-color null-check" placeholder="填写父亲号码" name="father_mobile" id="father_mobile" value="<?php echo $item['father_mobile']?>" datatype="m" errormsg="请输入正确的手机号！">
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">母亲姓名</label>
-						<input type="text" class="text-color" placeholder="填写母亲姓名" name="mother_name" id="mother_name" value="<?php echo $item['mother_name']?>" datatype="zh2-4" nullmsg="请输入姓名！" errormsg="请输入真实姓名！">
+						<input type="text" class="text-color null-check" placeholder="填写母亲姓名" name="mother_name" id="mother_name" value="<?php echo $item['mother_name']?>" datatype="zh2-4" nullmsg="请输入姓名！" errormsg="请输入真实姓名！">
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">母亲号码</label>
-						<input type="text" class="text-color" placeholder="填写母亲号码" name="mother_mobile" id="mother_mobile" value="<?php echo $item['mother_mobile']?>" datatype="m" errormsg="请输入正确的手机号！">
+						<input type="text" class="text-color null-check" placeholder="填写母亲号码" name="mother_mobile" id="mother_mobile" value="<?php echo $item['mother_mobile']?>" datatype="m" errormsg="请输入正确的手机号！">
 					</div>
 					<div class="mui-input-row address-box mui-select">
 						<label class="title-color">所在区域</label>
@@ -150,7 +150,7 @@
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">家庭住址</label>
-						<input type="text" class="text-color" placeholder="填写您的家庭地址" name="addr" id="addr" value="<?php echo $item['addr']?>" datatype="*" nullmsg="请输入地址！" errormsg="请输入地址！">
+						<input type="text" class="text-color null-check" placeholder="填写您的家庭地址" name="addr" id="addr" value="<?php echo $item['addr']?>" datatype="*" nullmsg="请输入地址！" errormsg="请输入地址！">
 					</div>
 				</div>
 			</form>
@@ -208,6 +208,15 @@ $(function () {
 			return;
 		}
 		parseClick = true;
+		
+		$('.null-check').each(function () {
+			var v = $(this).val();
+			v = $.trim(v);
+			if ( v == '' ) {
+				alert($(this).attr('nullmsg'));
+				return false;
+			}
+		});
 		
 		$('#data-form').submit();
 	});

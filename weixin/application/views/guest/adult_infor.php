@@ -49,11 +49,11 @@
 				<form method="post" id="data-form" action="<?php echo URL::base(NULL, true)?>guest/save/" class="mui-input-group">
                 	<div class="mui-input-row">
 						<label class="title-color">您是</label>
-                        <input name="signup_by" type="text" id="signup" value="成人学员" readonly>
+                        <input name="signup_by" type="text" id="signup" value="成人学员" readonly="readonly">
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">学员姓名</label>
-						<input type="text" class="text-color" placeholder="填写您的姓名" name="realname" id="realname" value="<?php echo $item['realname']?>" datatype="zh2-4" nullmsg="请输入姓名！" errormsg="请输入真实姓名！">
+						<input type="text" class="text-color null-check" placeholder="填写您的姓名" name="realname" id="realname" value="<?php echo $item['realname']?>" datatype="zh2-4" nullmsg="请输入姓名！" errormsg="请输入真实姓名！">
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">性别</label>
@@ -67,10 +67,10 @@
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">出生日期</label>
-						<input type="text" class="text-color" placeholder="格式：19990101" name="birthday" id="birthday" value="<?php echo $item['birthday']?>" datatype="n" nullmsg="请输入出生日期！" errormsg="请输入出生日期！">
+						<input type="text" class="text-color null-check" placeholder="格式：19990101" name="birthday" id="birthday" value="<?php echo $item['birthday']?>" datatype="n" nullmsg="请输入出生日期！" errormsg="请输入出生日期！">
 					</div>
 					<div class="mui-input-row mui-select">
-						<label class="title-color">报名机构</label>
+						<label class="title-color null-check">报名机构</label>
 						<select name="entity_id" id="entity_id" datatype="*" nullmsg="请选择分机构！" errormsg="请选择分机！" class="text-color">
 							<option value=""></option>
 							<?php foreach ( $entities as $v ):?>
@@ -82,7 +82,7 @@
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">手机号码</label>
-						<input type="text" class="text-color" placeholder="填写手机号码" name="mobile" id="mobile" value="<?php echo $item['mobile']?>" datatype="m" ignore="ignore" errormsg="请输入正确的手机号！">
+						<input type="text" class="text-color null-check" placeholder="填写手机号码" name="mobile" id="mobile" value="<?php echo $item['mobile']?>" datatype="m" ignore="ignore" nullmsg="请输入正确的手机号！" errormsg="请输入正确的手机号！">
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">QQ</label>
@@ -109,7 +109,7 @@
 					</div>
 					<div class="mui-input-row">
 						<label class="title-color">家庭住址</label>
-						<input type="text" class="text-color" placeholder="填写您的家庭地址" name="addr" id="addr" value="<?php echo $item['addr']?>" datatype="*" nullmsg="请输入地址！" errormsg="请输入地址！">
+						<input type="text" class="text-color null-check" placeholder="填写您的家庭地址" name="addr" id="addr" value="<?php echo $item['addr']?>" datatype="*" nullmsg="请输入地址！" errormsg="请输入地址！">
 					</div>
 				</div>
 			</form>
@@ -146,6 +146,15 @@ $(function () {
 			return;
 		}
 		parseClick = true;
+		
+		$('.null-check').each(function () {
+			var v = $(this).val();
+			v = $.trim(v);
+			if ( v == '' ) {
+				alert($(this).attr('nullmsg'));
+				return false;
+			}
+		});
 		
 		$('#data-form').submit();
 	});
