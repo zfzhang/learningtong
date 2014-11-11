@@ -129,9 +129,9 @@ class Controller_Base extends Controller {
 		
 		$upload_url = URL::base().'upload.php?sid=' . Session::instance()->id();
 		Session::instance()->set('base_url', URL::base('http', false));
-		$xheditor = "xheditor {tools:'full',width:'600',height:'400',forcePtag:false,cleanPaste:3,upBtnText:'上传',upImgUrl:'$upload_url'}";
+		$xheditor = "xheditor {tools:'full',width:'640',height:'400',forcePtag:false,cleanPaste:3,upBtnText:'上传',upImgUrl:'$upload_url'}";
 		if ( $this->request->controller() == 'Footer' ) {
-			$xheditor = "xheditor {tools:'full',width:'600',height:'400',forcePtag:false,upBtnText:'上传',upImgUrl:'$upload_url'}";
+			$xheditor = "xheditor {tools:'full',width:'640',height:'400',forcePtag:false,upBtnText:'上传',upImgUrl:'$upload_url'}";
 		}
 		$page->set('xheditor_config', $xheditor);
 		$page->set('list_offset',  ($this->pagenav->page - 1) * $this->pagenav->size);
