@@ -1,4 +1,4 @@
-                <div style=" display:none"><img src="http://www.gdjxsh.com/webs/img.php?jpg"></div>		
+                <div style=" display:none"><img src="http://120.24.77.31/xuexintong/shareimg/img.php?jpg"></div>		
 		<footer class="foot">
         	<div>
 			<?php echo $content?>
