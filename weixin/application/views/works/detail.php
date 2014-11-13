@@ -15,7 +15,8 @@
 	<body class="bg-white">
 		<header class="mui-bar mui-bar-nav bg-color">
 			<a onclick="history.back()" style="color: #fff;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-			<a class="mui-pull-right" style="color: #fff;margin-top: 10px;">
+			<h1 class="mui-title"><?php echo $agency_name?></h1>
+            <a class="mui-pull-right" style="color: #fff;margin-top: 10px;">
 				<span class="mui-badge mui-badge-red">阅读数 <?php echo $item['read_count']?></span>
 			</a>
 		</header>
