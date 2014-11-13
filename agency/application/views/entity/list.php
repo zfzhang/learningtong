@@ -34,6 +34,9 @@
 								<a href="<?php echo URL::base(NULL, TRUE)?>grade/list/" >年级设置</a>
 								<a href="<?php echo URL::base(NULL, TRUE)?>footer" >底部设置</a>
 							</div>
+                            <div class="explain-box">
+								<p>温馨提示：此页面的参数为分机构的设置，请注意添加。</p>
+							</div>
 							<div class="titlenav" style="margin-top: 20px;">
 								<a style="float: right;" href="<?php echo URL::base(NULL, TRUE)?>entity/add/">添加分机构</a>
 							</div>

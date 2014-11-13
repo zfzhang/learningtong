@@ -32,6 +32,9 @@
 								<a href="#" class="active">知识分享</a>
 								<a href="<?php echo URL::base(NULL, TRUE)?>article/add/">添加分享</a>
 							</div>
+                            <div class="explain-box">
+								<p>温馨提示：发布文章之后，需要在此页面上，点击发布，否则手机页面无法查看。</p>
+							</div>
 							<div class="input-box">
 								<span>标题：</span>
 								<input type="text" id="title" class="data-field" />

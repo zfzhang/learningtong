@@ -442,3 +442,11 @@
 	margin-top: 20px;
 	height:200px	
 }
+
+.explain-box {
+	width:100%; 
+	margin:10px auto; 
+	padding:10px; 
+	background-color:#FFC;
+	color:#F30;
+}

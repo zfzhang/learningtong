@@ -36,6 +36,9 @@
 								<a href="<?php echo URL::base(NULL, TRUE)?>show/list">展示</a>
 								<a href="<?php echo URL::base(NULL, TRUE)?>contact">联系</a>
 							</div>
+                            <div class="explain-box">
+								<p>温馨提示：为了在手机页面有更好的展示效果，学信通提醒您在编辑器里不要随意更改图片大小和文字大小，字体颜色可以根据需要修改。</p>
+							</div>
 							<br /><br />
 							
 							<form method="post" id="data-form" action="<?php echo URL::base(NULL, true)?>introduction/save/">

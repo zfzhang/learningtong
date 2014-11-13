@@ -36,6 +36,9 @@
 								<a class="active" >年级设置</a>
 								<a href="<?php echo URL::base(NULL, TRUE)?>footer" >底部设置</a>
 							</div>
+                            <div class="explain-box">
+								<p>温馨提示：此页面的参数为学生所在的年级，建议设置为某年级，无需设置到某年纪某班。</p>
+							</div>
 							<div class="titlenav" style="margin-top: 20px;">
 								<a style="float: right;" href="<?php echo URL::base(NULL, TRUE)?>grade/add/">添加年级</a>
 							</div>

@@ -36,6 +36,9 @@
 								<a href="<?php echo URL::base(NULL, TRUE)?>grade/list/" >年级设置</a>
 								<a href="<?php echo URL::base(NULL, TRUE)?>footer" >底部设置</a>
 							</div>
+                            <div class="explain-box">
+								<p>温馨提示：此参数是学生就读的学校，非机构本身的名称或分机构的名称，请注意添加！</p>
+							</div>
 							<div class="titlenav" style="margin-top: 20px;">
 								<a style="float: right;" href="<?php echo URL::base(NULL, TRUE)?>school/add/">添加学校</a>
 							</div>
