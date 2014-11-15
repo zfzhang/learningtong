@@ -15,7 +15,7 @@
 		  </style>
 		<![endif]-->
 		
-		<script type="text/javascript" src="<?PHP echo URL::base()?>js/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="<?PHP echo URL::base()?>js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="<?PHP echo URL::base()?>laydate/laydate.js"></script>
         <script type="text/javascript" charset="utf-8" src="<?PHP echo URL::base()?>js/Validform_v5.3.2.js"></script>
 	</head>
