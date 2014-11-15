@@ -70,7 +70,7 @@
 									</li>
 									<li>
 										<span class="m-name">所属分机构：</span>
-                                        <select name="entity_id" id="entity"  datatype="*">
+                                        <select name="entity_id" id="entity">
 											<option value="">请选择</option>
 											<?php foreach ( $entities as $v ) : ?>
 											<option value="<?php echo $v['id']?>"><?php echo $v['name']?></option>
