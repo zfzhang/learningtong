@@ -5,6 +5,6 @@
             </div>
 		</footer>
         <script type="text/javascript">
-		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-		document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F2c6a59a86f94b1f2a6897938fd70451d' type='text/javascript'%3E%3C/script%3E"));
-		</script>
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F854ba147ca8304e142fa00568537ef35' type='text/javascript'%3E%3C/script%3E"));
+</script>
