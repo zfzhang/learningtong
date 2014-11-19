@@ -9,19 +9,19 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="<?PHP echo URL::base()?>css/mui.min.css">
 		<link rel="stylesheet" type="text/css" href="<?PHP echo URL::base()?>css/base.css" />
-		<link rel="stylesheet" type="text/css" href="<?PHP echo URL::base()?>css/<?php echo $theme?>.css" />
+		<link rel="stylesheet" type="text/css" href="<?PHP echo URL::base()?>css/blue.css" />
 		<link rel="stylesheet" type="text/css" href="<?PHP echo URL::base()?>css/article.css" />
 	</head>
 	<body class="bg-white">
 		<div class="mui-content" id="mui-content">
-			<div id="segmentedControl" class="mui-segmented-control b-color" style="margin: 0 auto;width: 96%;margin-top: 10px;">
-				<a  class="mui-control-item mui-active tab-bgcolor">
+			<div id="segmentedControl" class="mui-segmented-control" style="margin: 0 auto;width: 96%;margin-top: 10px;">
+				<a class="mui-control-item mui-active">
 					简介
 				</a>
-				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/show/"  class="mui-control-item border-color tab-bgcolor">
+				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/show/" class="mui-control-item">
 					展示
 				</a>
-				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/contact/"  class="mui-control-item border-color tab-bgcolor">
+				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/contact/" class="mui-control-item">
 					联系
 				</a>
 				</div>

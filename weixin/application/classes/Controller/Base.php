@@ -98,13 +98,6 @@ class Controller_Base extends Controller {
 				
 			Session::instance()->set('agency_id', $this->auth->agency_id);
 			Session::instance()->set('uuid', $uuid);
-			
-			if ( $this->agency->get('theme') ) {
-				Session::instance()->set('theme', $this->agency->get('theme'));
-			} else {
-				Session::instance()->set('theme', 'blue');
-			}
-			
 		} catch ( Database_Exception $e ) {
 			$this->response->body($e->getMessage());
 		}
@@ -362,7 +355,6 @@ class Controller_Base extends Controller {
 		$page->set('agency_name',  $this->agency->get('realname'));
 		$page->set('agency_id',    $this->agency->get('id'));
 		$page->set('uuid',         $this->agency->get('username'));
-		$page->set('theme',        $this->agency->get('theme'));
 		
 		$items = DB::select('*')
 			->from('footer')
