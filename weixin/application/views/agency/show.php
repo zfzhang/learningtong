@@ -35,18 +35,18 @@
 
 	<body class="bg-white">
 		<div class="mui-content">
-			<div id="segmentedControl" class="mui-segmented-control b-color" style="margin: 0 auto;width: 96%;margin-top: 10px;">
-				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/index/"  class="mui-control-item tab-bgcolor">
+			<div id="segmentedControl" class="mui-segmented-control" style="margin: 0 auto;width: 96%;margin-top: 10px;">
+				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/index/" class="mui-control-item">
 
 					简介
 
 				</a>
-				<a class="mui-control-item mui-active border-color tab-bgcolor">
+				<a class="mui-control-item mui-active">
 
 					展示
 
 				</a>
-				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/contact/"  class="mui-control-item tab-bgcolor">
+				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/contact/" class="mui-control-item">
 
 					联系
 
