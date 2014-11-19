@@ -705,13 +705,13 @@ input[type=submit] {
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 1.42;
-	color: #333;
+	color: #FFFFFF;
 	text-align: center;
 	white-space: nowrap;
 	vertical-align: top;
 	cursor: pointer;
-	background-color: #fff;
-	border: 1px solid #ccc;
+	background-color: #2f78df;
+	border: 1px solid #2f78df;
 	border-radius: 3px;
 	-webkit-transition: all;
 	transition: all;
@@ -766,8 +766,8 @@ input[type=submit]:active {
 .mui-btn-positive,
 .mui-btn-success {
 	color: #fff;
-	background-color: #4cd964;
-	border: 1px solid #4cd964
+	background-color: #007aff;
+	border: 1px solid #007aff;
 }
 .mui-btn-green.mui-active,
 .mui-btn-green:active,
@@ -1602,8 +1602,7 @@ select {
 	border: 0
 }
 .mui-input-row {
-	position: relative;
-	margin-top:5px;
+	position: relative
 }
 .mui-input-row.mui-input-range {
 	padding-right: 20px;
