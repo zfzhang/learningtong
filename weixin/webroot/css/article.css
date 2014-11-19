@@ -15,10 +15,9 @@ body{
 }
 .content-box{
 	width: 100%;
-	padding:0 4%;
+	padding:0 2%;
 	margin-bottom: 15px;
 	overflow: hidden;
-	color: #646464;
 }
 .content-box img{
 	width: 100%;
@@ -128,7 +127,6 @@ body{
 	float: left;
 	margin-top: 90px;
 	text-align: center;
-	color: #363636;
 }
 .course-title{
 	width: 100%;
@@ -142,8 +140,7 @@ body{
 	width: 100%;
 	padding: 0 2%;
 	float: left;
-	margin-top: 10px;
-	margin-bottom:10px;
+	margin-top: 20px;
 }
 .table-cell table{
 	width: 100%;
@@ -152,37 +149,17 @@ body{
 }
 .table-cell table tr td{
 	padding: 7px;
-	color: #363636;
 }
 .table-cell table tr td:first-child{
-	width: 90px;
+	min-width: 90px;
 	color: #000;
 }
-
-.table-cell table tr td:nth-child(2){
-	font-size:0.75em;
-	color: #545454;
-}
 .course-detail-con{
-	margin-left:1%;
-	width: 98%;
-	padding: 10px;
+	width: 100%;
+	padding: 0 2%;
 	float: left;
-	margin-top: 10px;
-	margin-bottom:10px;
+	margin-top: 30px;
 	color: #363636;
-}
-.course-detail-note{
-	margin-left:2%;
-	width: 96%;
-	padding: 10px;
-	float: left;
-	margin-top: 10px;
-	margin-bottom:10px;
-	color: #363636;
-	font-size:0.75em;
-	color:#a3a3a3;
-	background-color:#fff;
 }
 /*老师评语*/
 .comments{
@@ -212,7 +189,6 @@ body{
 }
 .comments .comm-con{
 	margin-top: 15px;
-	color: #363636;
 }
 /*立即报名*/
 .sign-btn{
@@ -245,60 +221,23 @@ body{
 	padding: 3% 5%;
 	background: #fff;
 	border: 1px solid #EBE9E9;
-	color: #363636;
 }
 .work-title{
 	width: 100%;
 	height: 50px;
 	line-height: 50px;
 	font-weight: bold;
-	font-size: 1em;
+	font-size: 1.5em;
 	text-align: center;
 	border-bottom: 1px solid #EBE9E9;
 }
 .content-works{
 	margin-top: 20px;
-	color:#646464;
-	font-size: 0.75em;
 }
 .works-title-info{
 	width: 100%;
 	text-align: center;
-	color: #363636;
 }
 .works-title-info span{
 	color: #DD524D;
-}
-
-/*学生选择框*/
-.topbarselect {
-	-webkit-appearance:none;appearance:none;border:none;
-	font-size:0.75em;
-	-webkit-box-sizing:border-box;
-	box-sizing:border-box;
-	color:#333333;
-	float: right;
-	width: 65%;
-	height: 30px;
-	-webkit-appearance: none;
-	padding: 5px 15px;
-	margin-bottom:7px;
-	line-height: 21px;
-	-webkit-user-select: text;
-	background-color: #fff;
-	border: 1px solid rgba(0, 0, 0, .2);
-	border-radius: 3px;
-	outline: 0;
-	margin-top:7px;
-	}
-	
-.topbarlabel {
-	float: left;
-	width: 35%;
-	padding: 13px 15px;
-	font-family: "Helvetica Neue", Helvetica, sans-serif;
-	line-height: 1.1;
-	font-weight:bold;
-	color:#FFF;
-	margin-top:7px;
 }
