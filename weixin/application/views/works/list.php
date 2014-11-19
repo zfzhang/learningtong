@@ -59,7 +59,7 @@
 					<li class="mui-table-view-cell mui-media">
 						<a href="<?php echo URL::base(NULL, TRUE),'works/detail/?id=',$v['id']?>">
 							<div class="mui-media-body mui-ellipsis">
-								【<?php echo $v['class']?>】
+								【<?php echo $students_courses[$v['student_id']]?>】
 								<?php echo $v['student']?>同学的作品
 								《<?php echo $v['title']?>》
 								<p class='mui-ellipsis'><?php echo $v['remark']?></p>

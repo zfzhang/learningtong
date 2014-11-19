@@ -16,14 +16,10 @@ class Controller_Works extends Controller_Base {
 				->execute()
 				->as_array();
 				
-			$items = DB::select('works.*',array('students.realname', 'student'),array('courses.name', 'class'))
+			$items = DB::select('works.*',array('students.realname', 'student'),array('students.id', 'student_id'))
 				->from('works')
 				->join('students')
 				->on('works.student_id', '=', 'students.id')
-				->join('students_courses')
-				->on('students.id', '=', 'students_courses.student_id')
-				->join('courses')
-				->on('students_courses.course_id', '=', 'courses.id')
 				->where('works.agency_id', '=', $this->auth->agency_id)
 				->where('works.status', '=', STATUS_ENABLED)
 				->order_by('works.id', 'DESC')
@@ -32,6 +28,24 @@ class Controller_Works extends Controller_Base {
 				->execute()
 				->as_array();
 			
+			$ids = array();
+			$students_courses = array();
+			foreach ( $items as $v ) {
+				$ids[] = $v['student_id'];
+			}
+			if ( $ids ) {
+				$query = DB::select('courses.name', 'students_courses.student_id')
+					->from('courses')
+					->join('students_courses')
+					->on('courses.id', '=', 'students_courses.course_id')
+					->where('students_courses.student_id', 'in', $ids)
+					->execute()
+					->as_array();
+				foreach ($query as $v) {
+					$students_courses[$v['student_id']] = $v['name'];
+				}
+			}
+			
 			
 			if ( $this->request->is_ajax() ) {
 				echo json_encode($items);exit;
@@ -39,6 +53,7 @@ class Controller_Works extends Controller_Base {
 				$page = View::factory('works/list')
 					->set('items', $items)
 					->set('students', $this->students())
+					->set('students_courses', $students_courses)
 					->set('page',  $this->pagenav->page)
 					->set('images', $images);
 			}
