@@ -65,7 +65,7 @@
 									<span class="m-name">
 										所在机构：
 									</span>
-									<select class="data-field" id="agency">
+									<select class="data-field" id="entity">
 										<option value=""></option>
 										<?php foreach ( $entities as $v ) : ?>
 										<option value="<?php echo $v['id']?>"><?php echo $v['name']?></option>
