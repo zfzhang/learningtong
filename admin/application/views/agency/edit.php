@@ -245,63 +245,63 @@
 									<span class="m-name3">
 										-机构介绍&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/agency?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/agency?uuid=<?php echo $item['username']?>"/>
 									<span class="m-name3">
 										-作业任务&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/task?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/task?uuid=<?php echo $item['username']?>"/>
 									<span class="m-name3">
 										-学生成绩&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/report?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/report?uuid=<?php echo $item['username']?>"/>
 								</li>
 								<li>
 									<span class="m-name3">
 										-师资力量&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/agency/teachers?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/agency/teachers?uuid=<?php echo $item['username']?>"/>
 									<span class="m-name3">
 										-学生作品&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/agency/works?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/agency/works?uuid=<?php echo $item['username']?>"/>
 									<span class="m-name3">
 										-老师评语&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/comment?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/comment?uuid=<?php echo $item['username']?>"/>
 								</li>
 								<li>
 									<span class="m-name3">
 										-机构动态&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/news?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/news?uuid=<?php echo $item['username']?>"/>
 									<span class="m-name3">
 										-每日讯息&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/dailynews?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/dailynews?uuid=<?php echo $item['username']?>"/>
 									<span class="m-name3">
 										-我要反馈&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/feedback?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/feedback?uuid=<?php echo $item['username']?>"/>
 								</li>
 								<li>
 									<span class="m-name3">
 										-知识分享&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/article?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/article?uuid=<?php echo $item['username']?>"/>
 									<span class="m-name3">
 										-精英榜&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/top?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/top?uuid=<?php echo $item['username']?>"/>
 									<span class="m-name3">
 										-我要报名&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/class?uuid=<?php echo $item['username']?>&for=signup"/>
+									<input type="text" value="http://www.honham.com:86/index.php/class?uuid=<?php echo $item['username']?>&for=signup"/>
 								</li>
 								<li>
 									<span class="m-name3">
 										-课程介绍&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/class?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/class?uuid=<?php echo $item['username']?>"/>
 								</li>
                                 <li>
 									<span class="m-name3">
@@ -312,7 +312,7 @@
 									<span class="m-name3">
 										-学生资料&nbsp;>
 									</span>
-									<input type="text" value="http://120.24.77.31:86/index.php/student/infor?uuid=<?php echo $item['username']?>"/>
+									<input type="text" value="http://www.honham.com:86/index.php/student/infor?uuid=<?php echo $item['username']?>"/>
 								</li>
 								<li style="text-align: center;">
 									<i class="tishi">
