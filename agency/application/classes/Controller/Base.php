@@ -10,6 +10,7 @@ class Auth_User {
 	public $role_id;
 	public $agency_id;
 	public $agency_name;
+	public $less_func;
 }
 
 class Pagenav {
@@ -35,6 +36,7 @@ class Controller_Base extends Controller {
 		$this->auth->role_id     = intval( Session::instance()->get('role_id') );
 		$this->auth->agency_id   = intval( Session::instance()->get('agency_id') );
 		$this->auth->agency_name = strval( Session::instance()->get('agency_name') );
+		$this->auth->less_func   = intval( Session::instance()->get('less_func') );
 		
 		$this->ajax_result = array('ret' => 0, 'msg' => 'success');
 		
