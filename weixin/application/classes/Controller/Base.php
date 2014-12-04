@@ -37,7 +37,7 @@ class Controller_Base extends Controller {
 		$this->auth->user_id     = intval( Session::instance()->get('user_id') );
 		$this->auth->student_id  = intval( Session::instance()->get('student_id') );
 		$this->auth->wx_openid   = strval( Session::instance()->get('wx_openid') );
-		$this->auth->agency_id   = intval( Session::instance()->get('agency_id') );
+		//$this->auth->agency_id   = intval( Session::instance()->get('agency_id') );
 		$this->auth->username    = strval( Session::instance()->get('username') );
 		$this->auth->realname    = strval( Session::instance()->get('realname') );
 		$this->auth->school_id   = intval( Session::instance()->get('school_id') );
@@ -96,7 +96,7 @@ class Controller_Base extends Controller {
 				->execute();
 			$this->auth->agency_id = $this->agency->get('id');
 				
-			Session::instance()->set('agency_id', $this->auth->agency_id);
+			//Session::instance()->set('agency_id', $this->auth->agency_id);
 			Session::instance()->set('uuid', $uuid);
 			
 			if ( $this->agency->get('theme') ) {
@@ -163,7 +163,7 @@ class Controller_Base extends Controller {
 		$result = json_decode($jsonStr, true);
 		if ( isset($result['errcode']) ) {
 			//Log::instance()->add(Log::DEBUG, $result['errcode']);
-			HTTP::redirect('/agency/index/');
+			HTTP::redirect( '/agency/index/?uuid='. Session::instance()->get('uuid') );
 			echo 'wx_openid: ',$this->auth->wx_openid,'<br />';
 			echo 'openid: ',Session::instance()->get('wx_openid'),'<br />';
 			echo '<pre>';
