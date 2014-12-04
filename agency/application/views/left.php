@@ -25,6 +25,7 @@
 									</li>
 								</ul>
 							</li>
+							<?php if ( !isset($less_func) or $less_func == 0 ) : ?>
 							<li class="submenu">
 								<a href="#"> <span>学员管理</span>
 								</a>
@@ -88,5 +89,16 @@
 									</li>									
 								</ul>
 							</li>
+							<?php else:?>
+							<li class="submenu">
+								<a href="#"> <span>设置</span>
+								</a>
+								<ul>
+									<li <?php echo ($active=="change_password") ? 'class="active"' : '';?> >
+										<a href="<?php echo URL::base(NULL, TRUE)?>session/pswd/">-密码修改</a>
+									</li>
+								</ul>
+							</li>
+							<?php endif;?>
 						</ul>
 						
