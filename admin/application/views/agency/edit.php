@@ -69,6 +69,15 @@
 									</span>
 									<input type="text" name="wx_secret" id="wx_secret" value="<?php echo $item['wx_secret']?>"  datatype="*"/>
 								</li>
+								<li>
+									<span class="m-name">
+										公众号类型：
+									</span>
+									<select name="less_func">
+										<option value="0" <?php if ($item['less_func'] == 0) echo 'selected="selected"'?> >服务号<option>
+										<option value="1" <?php if ($item['less_func'] == 1) echo 'selected="selected"'?> >定阅号<option>
+									</select>
+								</li>
 							</ul>
 						</div>
 						<div class="accountSettings-title">
