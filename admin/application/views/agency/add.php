@@ -67,6 +67,15 @@
 									</span>
 									<input type="text" name="wx_secret" id="wx_secret" datatype="*"/>
 								</li>
+								<li>
+									<span class="m-name">
+										公众号类型：
+									</span>
+									<select name="less_func">
+										<option value="0">服务号</option>
+										<option value="1">定阅号</option>
+									</select>
+								</li>
 							</ul>
 						</div>
 						<div class="accountSettings-title">
