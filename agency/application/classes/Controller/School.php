@@ -10,10 +10,15 @@ class Controller_School extends Controller_Base {
 			->where('schools.status', '>', STATUS_DELETED)
 			->execute()
 			->as_array();
+		
+		$agencies = DB::select('entity_num')
+			->from('agencies')
+			->where('id', '=', $this->auth->agency_id)
+			->execute();
 			
 		$page = View::factory('school/list')
 			->set('items', $items)
-			->set('entity_num', count($this->entities()));
+			->set('entity_num', $agencies->get('entity_num'));
 
 		$this->output($page, 'setting');
 	}
