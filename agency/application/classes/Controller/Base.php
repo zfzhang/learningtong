@@ -123,6 +123,7 @@ class Controller_Base extends Controller {
 			->set('agency_name', $this->auth->agency_name)
 			->set('username', $this->auth->username);
 		$page->html_left_content = View::factory('left')
+			->set('less_func', $this->auth->less_func)
 			->set('active', $menu);
 		if ( isset($page->html_pagenav_content) ) {
 			$base_url = URL::base(NULL, TRUE).$this->request->controller().'/'.$this->request->action().'/';
