@@ -10,10 +10,15 @@ class Controller_Grade extends Controller_Base {
 			->where('grades.status', '>', STATUS_DELETED)
 			->execute()
 			->as_array();
+		
+		$agencies = DB::select('entity_num')
+			->from('agencies')
+			->where('id', '=', $this->auth->agency_id)
+			->execute();
 			
 		$page = View::factory('grade/list')
 			->set('items', $items)
-			->set('entity_num', count($this->entities()));
+			->set('entity_num', $agencies->get('entity_num'));
 
 		$this->output($page, 'setting');
 	}
