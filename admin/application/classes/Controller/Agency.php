@@ -92,6 +92,7 @@ class Controller_Agency extends Controller_Base {
 		$data['province']   = intval($this->request->post('province'));
 		$data['city']       = intval($this->request->post('city'));
 		$data['area']       = intval($this->request->post('area'));
+		$data['less_func']  = intval($this->request->post('less_func'));
 		
 		$data['modified_at']  = date('Y-m-d H:i:s');
 		
