@@ -15,7 +15,8 @@ class Controller_Session extends Controller_Base {
 		$session->set('add_t',     $user->get('add_t'));
 		$session->set('modify_t',  $user->get('modify_t'));
 		
-		$session->set('agency_name',  $agency->get('realname'));
+		$session->set('agency_name', $agency->get('realname'));
+		$session->set('less_func',   $agency->get('less_func'));
 	}
 	
 	public function action_index()
@@ -35,7 +36,7 @@ class Controller_Session extends Controller_Base {
 		}
 				
 		try {
-			$agencies = DB::select('id', 'status', 'realname')
+			$agencies = DB::select('id', 'status', 'realname', 'less_func')
 				->from('agencies')
 				->where('username', '=', $agency_sid)
 				->limit(1)
