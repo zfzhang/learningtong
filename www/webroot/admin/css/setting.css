@@ -1,0 +1,51 @@
+.set-nav {
+	margin: 0 auto;
+	width: 96%;
+	height: 40px;
+	margin-top: 20px;
+	border-bottom: 1px solid #2B7DBC;
+}
+.set-nav a {
+	display: block;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	float: left;
+}
+.set-nav a.active {
+	color: #fff;
+	background: #2B7DBC;
+}
+.setting-table{
+	margin: 0 auto;
+	width: 96%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.setting-table .title{
+	width: 100%;
+	text-align: right;
+	height: 35px;
+	line-height: 35px;
+}
+.setting-table .title a{
+	color: #2B7DBC;
+}
+.setting-table .title a:hover{
+	color: #4C8FBD;
+}
+.setting-table table{
+	width: 100%;
+	border-color: #e8eff0;
+}
+.setting-table table th{
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+}
+.setting-table table td{
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}

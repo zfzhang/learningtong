@@ -1,0 +1,31 @@
+.contentBoxTitle{
+	margin: 0 auto;
+	width: 96%;
+	height: 40px;
+	line-height: 40px;
+	font-weight: bold;
+}
+.contentList{
+	padding-bottom: 20px;
+}
+.contentList ul li{
+	margin: 0 auto;
+	width: 92%;
+	padding: 0 2%;
+	background: #f2f2f2;
+	height: 40px;
+	line-height: 40px;
+}
+.contentList ul li.odd{
+	background: #fff;
+}
+.contentList ul li span.infoName{
+	display: block;
+	width: 150px;
+	float: left;
+}
+.contentList ul li span.infoabout{
+	display: block;
+	width: auto;
+	float: left;
+}
