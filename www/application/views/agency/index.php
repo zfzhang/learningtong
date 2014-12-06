@@ -3,8 +3,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>弘翰文化</title>
-	<link href="<?php URL::base(NULL, FALSE)?>css/styles.css" rel="stylesheet" type="text/css" />
-	<script src="<?php URL::base(NULL, FALSE)?>js/DD_roundies_min.js" type="text/javascript"></script>
+	<link href="<?php echo URL::base()?>css/styles.css" rel="stylesheet" type="text/css" />
+	<script src="<?php echo URL::base()?>js/DD_roundies_min.js" type="text/javascript"></script>
     <script type="text/javascript">
 	DD_roundies.addRule('.titleimagesdiv', '5px', true);
 	</script>
@@ -21,25 +21,25 @@
 		<!-- 顶部登录结束 -->
 		<!-- Logo开始 -->
 		<div class="logo">
-			<img src="<?php URL::base(NULL, FALSE)?>images/logo.jpg" alt="" />
+			<img src="<?php echo URL::base()?>images/logo.jpg" alt="" />
 		</div>
 		<!-- Logo结束 -->
 		<!-- 导航开始 -->
 		<div class="nav">
 			<div class="navBox">
 				<div class="navSplit"></div>
-				<div class="navMenu"><a href="<?php URL::base(NULL, TRUE)?>agency/index">首 页</a></div>
+				<div class="navMenu"><a href="<?php echo URL::base(NULL, TRUE)?>agency/index">首 页</a></div>
 				<div class="navSplit"></div>
-				<div class="navMenu"><a href="<?php URL::base(NULL, TRUE)?>agency/view">动态观点</a></div>
+				<div class="navMenu"><a href="<?php echo URL::base(NULL, TRUE)?>agency/view">动态观点</a></div>
 				<div class="navSplit"></div>
-				<div class="navMenu"><a href="<?php URL::base(NULL, TRUE)?>agency/solution">服务内容</a></div>
+				<div class="navMenu"><a href="<?php echo URL::base(NULL, TRUE)?>agency/solution">服务内容</a></div>
 				<div class="navSplit"></div>
-				<div class="navMenu"><a href="<?php URL::base(NULL, TRUE)?>agency/pro">学信通</a></div>
+				<div class="navMenu"><a href="<?php echo URL::base(NULL, TRUE)?>agency/pro">学信通</a></div>
 				<div class="navSplit"></div>
-				<div class="navMenu"><a href="<?php URL::base(NULL, TRUE)?>agency/us">我们</a></div>
+				<div class="navMenu"><a href="<?php echo URL::base(NULL, TRUE)?>agency/us">我们</a></div>
 				<div class="navSplit"></div>
 				<div class="clear"></div>
-				<div class="navOnIndex"><img src="images/on.png" alt="" /></div>
+				<div class="navOnIndex"><img src="<?php echo URL::base()?>images/on.png" alt="" /></div>
 			</div>
 		</div>
 		<!-- 导航结束 -->
@@ -48,13 +48,13 @@
 			<div class="wrapper">
 				<div id="slideshow" class="box_skitter fn-clear">
 					<ul>
-						<li><a href="#"><img src="<?php URL::base(NULL, FALSE)?>images/b_0.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="<?php URL::base(NULL, FALSE)?>images/b_0.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="<?php URL::base(NULL, FALSE)?>images/b_0.jpg" alt="" /></a></li>
-						<li><a href="#"><img src="<?php URL::base(NULL, FALSE)?>images/b_0.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="<?php echo URL::base()?>images/b_0.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="<?php echo URL::base()?>images/b_0.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="<?php echo URL::base()?>images/b_0.jpg" alt="" /></a></li>
+						<li><a href="#"><img src="<?php echo URL::base()?>images/b_0.jpg" alt="" /></a></li>
 					</ul>
 				</div>
-				<script src="<?php URL::base(NULL, FALSE)?>js/slideshow.js" type="text/javascript"></script>
+				<script src="<?php echo URL::base()?>js/slideshow.js" type="text/javascript"></script>
 			</div>
 		</div>
 		<!-- Banner结束 -->
@@ -65,19 +65,19 @@
 			<div class="userBar">客户</div>
 			<div class="userBox">
 				<div class="userItem">
-					<div class="userImg"><a href="#"><img src="<?php URL::base(NULL, FALSE)?>images/u_0.jpg" alt="" /></a></div>
+					<div class="userImg"><a href="#"><img src="<?php echo URL::base()?>images/u_0.jpg" alt="" /></a></div>
 					<div class="userTitle"><a href="#">广州知了教育有限公司</a></div>
 				</div>
 				<div class="userItem">
-					<div class="userImg"><a href="#"><img src="<?php URL::base(NULL, FALSE)?>images/u_1.jpg" alt="" /></a></div>
+					<div class="userImg"><a href="#"><img src="<?php echo URL::base()?>images/u_1.jpg" alt="" /></a></div>
 					<div class="userTitle"><a href="#">广州知了教育有限公司</a></div>
 				</div>
 				<div class="userItem">
-					<div class="userImg"><a href="#"><img src="<?php URL::base(NULL, FALSE)?>images/u_2.jpg" alt="" /></a></div>
+					<div class="userImg"><a href="#"><img src="<?php echo URL::base()?>images/u_2.jpg" alt="" /></a></div>
 					<div class="userTitle"><a href="#">广州知了教育有限公司</a></div>
 				</div>
 				<div class="userItemEnd">
-					<div class="userImg"><a href="#"><img src="<?php URL::base(NULL, FALSE)?>images/u_3.jpg" alt="" /></a></div>
+					<div class="userImg"><a href="#"><img src="<?php echo URL::base()?>images/u_3.jpg" alt="" /></a></div>
 					<div class="userTitle"><a href="#">广州知了教育有限公司</a></div>
 				</div>
 				<div class="clear"></div>
@@ -94,7 +94,7 @@
 				</div>
 				<div class="infoUnitCont">
 					<div class="infoUnitLeft">
-						<div class="infoUnitLeftImg"><img src="<?php URL::base(NULL, FALSE)?>images/bk.jpg" alt="" /></div>
+						<div class="infoUnitLeftImg"><img src="<?php echo URL::base()?>images/bk.jpg" alt="" /></div>
 						<div class="infoUnitLeftTit"><a href="#">相信自己，永不松懈！</a></div>
 						<div class="infoUnitLeftCt">
 							可能你觉得备考几天就很辛苦了，但是你要想到之后可能迎来一个很美好的未来。不要松懈，坚持，坚持，再坚持！
@@ -103,7 +103,7 @@
 					<div class="infoUnitRight">
 						<div class="infoRightItem">
 							<div class="infoItemIts">
-								<div class="infoItemImg titleimagesdiv" style="background:url(<?php URL::base(NULL, FALSE)?>images/1.jpg)">
+								<div class="infoItemImg titleimagesdiv" style="background:url(<?php echo URL::base()?>images/1.jpg)">
                                 </div>
 							</div>
 							<div class="infoItemBts">
@@ -115,7 +115,7 @@
 						</div>
 						<div class="infoRightItem">
 							<div class="infoItemIts">
-								<div class="infoItemImg titleimagesdiv" style="background:url(<?php URL::base(NULL, FALSE)?>images/1.jpg)">
+								<div class="infoItemImg titleimagesdiv" style="background:url(<?php echo URL::base()?>images/1.jpg)">
                                 </div>
 							</div>
 							<div class="infoItemBts">
@@ -127,7 +127,7 @@
 						</div>
 						<div class="infoRightItemEnd">
 							<div class="infoItemIts">
-								<div class="infoItemImg titleimagesdiv" style="background:url(<?php URL::base(NULL, FALSE)?>images/1.jpg)">
+								<div class="infoItemImg titleimagesdiv" style="background:url(<?php echo URL::base()?>images/1.jpg)">
                                 </div>
 							</div>
 							<div class="infoItemBts">
@@ -149,7 +149,7 @@
 				</div>
 				<div class="infoUnitCont">
 					<div class="infoUnitLeft">
-						<div class="infoUnitLeftImg"><img src="<?php URL::base(NULL, FALSE)?>images/bk.jpg" alt="" /></div>
+						<div class="infoUnitLeftImg"><img src="<?php echo URL::base()?>images/bk.jpg" alt="" /></div>
 						<div class="infoUnitLeftTit"><a href="#">相信自己，永不松懈！</a></div>
 						<div class="infoUnitLeftCt">
 							可能你觉得备考几天就很辛苦了，但是你要想到之后可能迎来一个很美好的未来。不要松懈，坚持，坚持，再坚持！
@@ -158,7 +158,7 @@
 					<div class="infoUnitRight">
 						<div class="infoRightItem">
 							<div class="infoItemIts">
-								<div class="infoItemImg titleimagesdiv" style="background:url(<?php URL::base(NULL, FALSE)?>images/1.jpg)">
+								<div class="infoItemImg titleimagesdiv" style="background:url(<?php echo URL::base()?>images/1.jpg)">
                                 </div>
 							</div>
 							<div class="infoItemBts">
@@ -170,7 +170,7 @@
 						</div>
 						<div class="infoRightItem">
 							<div class="infoItemIts">
-								<div class="infoItemImg titleimagesdiv" style="background:url(<?php URL::base(NULL, FALSE)?>images/1.jpg)">
+								<div class="infoItemImg titleimagesdiv" style="background:url(<?php echo URL::base()?>images/1.jpg)">
                                 </div>
 							</div>
 							<div class="infoItemBts">
@@ -182,7 +182,7 @@
 						</div>
 						<div class="infoRightItemEnd">
 							<div class="infoItemIts">
-								<div class="infoItemImg titleimagesdiv" style="background:url(<?php URL::base(NULL, FALSE)?>images/1.jpg)">
+								<div class="infoItemImg titleimagesdiv" style="background:url(<?php echo URL::base()?>images/1.jpg)">
                                 </div>
 							</div>
 							<div class="infoItemBts">

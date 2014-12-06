@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>弘翰文化</title>
-	<link href="<?php URL::base(NULL, FALSE)?>css/styles.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo URL::base()?>css/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <form>
@@ -17,38 +17,38 @@
 		<!-- 顶部登录结束 -->
 		<!-- Logo开始 -->
 		<div class="logo">
-			<img src="<?php URL::base(NULL, FALSE)?>images/logo.jpg" alt="" />
+			<img src="<?php echo URL::base()?>images/logo.jpg" alt="" />
 		</div>
 		<!-- Logo结束 -->
 		<!-- 导航开始 -->
 		<div class="nav">
 			<div class="navBox">
 				<div class="navSplit"></div>
-				<div class="navMenu"><a href="<?php URL::base(NULL, TRUE)?>agency/index">首 页</a></div>
+				<div class="navMenu"><a href="<?php echo URL::base(NULL, TRUE)?>agency/index">首 页</a></div>
 				<div class="navSplit"></div>
-				<div class="navMenu"><a href="<?php URL::base(NULL, TRUE)?>agency/view">动态观点</a></div>
+				<div class="navMenu"><a href="<?php echo URL::base(NULL, TRUE)?>agency/view">动态观点</a></div>
 				<div class="navSplit"></div>
-				<div class="navMenu"><a href="<?php URL::base(NULL, TRUE)?>agency/solution">服务内容</a></div>
+				<div class="navMenu"><a href="<?php echo URL::base(NULL, TRUE)?>agency/solution">服务内容</a></div>
 				<div class="navSplit"></div>
-				<div class="navMenu"><a href="<?php URL::base(NULL, TRUE)?>agency/pro">学信通</a></div>
+				<div class="navMenu"><a href="<?php echo URL::base(NULL, TRUE)?>agency/pro">学信通</a></div>
 				<div class="navSplit"></div>
-				<div class="navMenu"><a href="<?php URL::base(NULL, TRUE)?>agency/us">我们</a></div>
+				<div class="navMenu"><a href="<?php echo URL::base(NULL, TRUE)?>agency/us">我们</a></div>
 				<div class="navSplit"></div>
 				<div class="clear"></div>
-				<div class="navOnUs"><img src="<?php URL::base(NULL, FALSE)?>images/on.png" alt="" /></div>
+				<div class="navOnUs"><img src="<?php echo URL::base()?>images/on.png" alt="" /></div>
 			</div>
 		</div>
 		<!-- 导航结束 -->
 		<!-- Banner开始 -->
 		<div class="banner">
-			<a href="#"><img src="<?php URL::base(NULL, FALSE)?>images/b_0.jpg" alt="" /></a>
+			<a href="#"><img src="<?php echo URL::base()?>images/b_0.jpg" alt="" /></a>
 		</div>
 		<!-- Banner结束 -->
 	</div>
 	<div class="main">
 		<!-- About我们开始 -->
 		<div class="about">
-			<div class="aboutLeft"><img src="<?php URL::base(NULL, FALSE)?>images/about.jpg" alt="" /></div>
+			<div class="aboutLeft"><img src="<?php echo URL::base()?>images/about.jpg" alt="" /></div>
 			<div class="aboutRight">
 				<p style="text-indent:2em;color:#595959;font-size:16px;line-height:24px;">弘翰教育是一所集午托，作业辅导，外教，和补习为一体的机构；在开办的这几年，深得花城老家长，老学员的肯定和支持，期间相互介绍不少生源到我们中心，在此感激家长们对我们的信赖，我们中心秉承只做口碑的信念，会把我们的午托，教育做得越来越好！</p>
 				<p style="text-indent:2em;color:#595959;font-size:16px;line-height:24px;">新学期马上开始，我们中心午托班，晚上作业辅导，全托班已经开始接受报名，欢迎新老学生报名！同时，为应家长要求，本学期将新增外教班，奥数班，和拼音班。这些班都是根据老家长需求或要求而开，欢迎更多的家长把您的孩子送来。</p>
@@ -60,12 +60,12 @@
 		<!-- About我们结束 -->
 		<!-- Contact我们开始 -->
 		<div class="contact">
-			<div class="contactLeft"><img src="<?php URL::base(NULL, FALSE)?>images/contact.jpg" alt="" /></div>
+			<div class="contactLeft"><img src="<?php echo URL::base()?>images/contact.jpg" alt="" /></div>
 			<div class="contactMid">
 				<div class="contactTg">邮箱：izzf@qq.com</div>
 				<div class="contactTg">电话：0755-89832887</div>
 			</div>
-			<div class="contactRight"><img src="<?php URL::base(NULL, FALSE)?>images/wx.jpg" alt="" /></div>
+			<div class="contactRight"><img src="<?php echo URL::base()?>images/wx.jpg" alt="" /></div>
 			<div class="clear"></div>
 		</div>
 		<!-- Contact我们结束 -->
