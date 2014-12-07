@@ -15,7 +15,7 @@
 		<!-- 顶部登录开始 -->
 		<div class="top">
 			<div class="topLogin">
-				<a href="#">客户登陆</a>
+				<a href="http://www.honham.com:81">客户登陆</a>
 			</div>
 		</div>
 		<!-- 顶部登录结束 -->
@@ -89,15 +89,19 @@
 			<div class="infoUnit">
 				<div class="infoUnitBar">
 					<div class="infoUnitBarTit">机构动态</div>
-					<div class="infoUnitBarMore"><a href="#">more</a></div>
+					<div class="infoUnitBarMore"><a href="<?php echo URL::base(NULL, TRUE)?>agency/view">more</a></div>
 					<div class="clear"></div>
 				</div>
 				<div class="infoUnitCont">
 					<div class="infoUnitLeft">
 						<div class="infoUnitLeftImg"><img src="<?php echo URL::base()?>images/bk.jpg" alt="" /></div>
-						<div class="infoUnitLeftTit"><a href="#">相信自己，永不松懈！</a></div>
+						<div class="infoUnitLeftTit">
+							<a href="<?php echo URL::base(NULL, TRUE)?>agency/detail?id=<?php echo $news[0]['id']?>">
+								<?php echo $news[0]['title']?>
+							</a>
+						</div>
 						<div class="infoUnitLeftCt">
-							可能你觉得备考几天就很辛苦了，但是你要想到之后可能迎来一个很美好的未来。不要松懈，坚持，坚持，再坚持！
+							<?php echo $news[0]['remark']?>
 						</div>
 					</div>
 					<div class="infoUnitRight">
@@ -107,9 +111,13 @@
                                 </div>
 							</div>
 							<div class="infoItemBts">
-								<div class="infoItemTit"><a href="#">相信自己，永不松懈！</a></div>
-								<div class="infoItemCts">可能你觉得备考几天就很辛苦了，但是你要想到之后可能...</div>
-								<div class="infoItemDate">2014年11月3日</div>
+								<div class="infoItemTit">
+									<a href="<?php echo URL::base(NULL, TRUE)?>agency/detail?id=<?php echo $news[1]['id']?>">
+										<?php echo $news[1]['title']?>
+									</a>
+								</div>
+								<div class="infoItemCts"><?php echo $news[1]['remark']?></div>
+								<div class="infoItemDate"><?php echo substr($news[1]['modified_at'], 0, 10)?></div>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -119,9 +127,13 @@
                                 </div>
 							</div>
 							<div class="infoItemBts">
-								<div class="infoItemTit"><a href="#">相信自己，永不松懈！</a></div>
-								<div class="infoItemCts">可能你觉得备考几天就很辛苦了，但是你要想到之后可能...</div>
-								<div class="infoItemDate">2014年11月3日</div>
+								<div class="infoItemTit">
+									<a href="<?php echo URL::base(NULL, TRUE)?>agency/detail?id=<?php echo $news[2]['id']?>">
+										<?php echo $news[2]['title']?>
+									</a>
+								</div>
+								<div class="infoItemCts"><?php echo $news[2]['remark']?></div>
+								<div class="infoItemDate"><?php echo substr($news[2]['modified_at'], 0, 10)?></div>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -131,9 +143,13 @@
                                 </div>
 							</div>
 							<div class="infoItemBts">
-								<div class="infoItemTit"><a href="#">相信自己，永不松懈！</a></div>
-								<div class="infoItemCts">可能你觉得备考几天就很辛苦了，但是你要想到之后可能...</div>
-								<div class="infoItemDate">2014年11月3日</div>
+								<div class="infoItemTit">
+									<a href="<?php echo URL::base(NULL, TRUE)?>agency/detail?id=<?php echo $news[3]['id']?>">
+										<?php echo $news[3]['title']?>
+									</a>
+								</div>
+								<div class="infoItemCts"><?php echo $news[3]['remark']?></div>
+								<div class="infoItemDate"><?php echo substr($news[3]['modified_at'], 0, 10)?></div>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -144,15 +160,19 @@
 			<div class="infoWnt">
 				<div class="infoUnitBar">
 					<div class="infoUnitBarTit">我们的观点</div>
-					<div class="infoUnitBarMore"><a href="#">more</a></div>
+					<div class="infoUnitBarMore"><a href="<?php echo URL::base(NULL, TRUE)?>agency/view">more</a></div>
 					<div class="clear"></div>
 				</div>
 				<div class="infoUnitCont">
 					<div class="infoUnitLeft">
 						<div class="infoUnitLeftImg"><img src="<?php echo URL::base()?>images/bk.jpg" alt="" /></div>
-						<div class="infoUnitLeftTit"><a href="#">相信自己，永不松懈！</a></div>
+						<div class="infoUnitLeftTit">
+							<a href="<?php echo URL::base(NULL, TRUE)?>agency/detail?id=<?php echo $news[0]['id']?>">
+								<?php echo $news[0]['title']?>
+							</a>
+						</div>
 						<div class="infoUnitLeftCt">
-							可能你觉得备考几天就很辛苦了，但是你要想到之后可能迎来一个很美好的未来。不要松懈，坚持，坚持，再坚持！
+							<?php echo $news[0]['remark']?>
 						</div>
 					</div>
 					<div class="infoUnitRight">
@@ -162,9 +182,13 @@
                                 </div>
 							</div>
 							<div class="infoItemBts">
-								<div class="infoItemTit"><a href="#">相信自己，永不松懈！</a></div>
-								<div class="infoItemCts">可能你觉得备考几天就很辛苦了，但是你要想到之后可能...</div>
-								<div class="infoItemDate">2014年11月3日</div>
+								<div class="infoItemTit">
+									<a href="<?php echo URL::base(NULL, TRUE)?>agency/detail?id=<?php echo $news[1]['id']?>">
+										<?php echo $news[1]['title']?>
+									</a>
+								</div>
+								<div class="infoItemCts"><?php echo $news[1]['remark']?></div>
+								<div class="infoItemDate"><?php echo substr($news[1]['modified_at'], 0, 10)?></div>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -174,9 +198,13 @@
                                 </div>
 							</div>
 							<div class="infoItemBts">
-								<div class="infoItemTit"><a href="#">相信自己，永不松懈！</a></div>
-								<div class="infoItemCts">可能你觉得备考几天就很辛苦了，但是你要想到之后可能...</div>
-								<div class="infoItemDate">2014年11月3日</div>
+								<div class="infoItemTit">
+									<a href="<?php echo URL::base(NULL, TRUE)?>agency/detail?id=<?php echo $news[2]['id']?>">
+										<?php echo $news[2]['title']?>
+									</a>
+								</div>
+								<div class="infoItemCts"><?php echo $news[2]['remark']?></div>
+								<div class="infoItemDate"><?php echo substr($news[2]['modified_at'], 0, 10)?></div>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -186,9 +214,13 @@
                                 </div>
 							</div>
 							<div class="infoItemBts">
-								<div class="infoItemTit"><a href="#">相信自己，永不松懈！</a></div>
-								<div class="infoItemCts">可能你觉得备考几天就很辛苦了，但是你要想到之后可能...</div>
-								<div class="infoItemDate">2014年11月3日</div>
+								<div class="infoItemTit">
+									<a href="<?php echo URL::base(NULL, TRUE)?>agency/detail?id=<?php echo $news[3]['id']?>">
+										<?php echo $news[3]['title']?>
+									</a>
+								</div>
+								<div class="infoItemCts"><?php echo $news[3]['remark']?></div>
+								<div class="infoItemDate"><?php echo substr($news[3]['modified_at'], 0, 10)?></div>
 							</div>
 							<div class="clear"></div>
 						</div>
