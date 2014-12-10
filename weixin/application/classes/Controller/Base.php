@@ -43,14 +43,20 @@ class Controller_Base extends Controller {
 		$this->auth->school_id   = intval( Session::instance()->get('school_id') );
 		$this->auth->grade_id    = strval( Session::instance()->get('grade_id') );
 		
+		$uuid1 = Arr::get($_GET, 'uuid', '');
+		$uuid2 = Session::instance()->get('uuid');
+		
 		$this->init_agency();
 		if ( $this->request->action() != 'wx_login' and empty($this->auth->wx_openid) ) {
-			$c = $this->request->controller();
-			if ( $c == 'Student' or $c == 'Feedback' or $c == 'Comment' or $c == 'Task' or $c == 'Report' ) {
-				//Log::instance()->add(Log::DEBUG, 'wx_auth');
-				Session::instance()->set('callback_url', '/'.$this->request->controller().'/'.$this->request->action().'/');
-				$this->wx_auth();
-				return;
+			if ( $uuid1 and $uuid2 and $uuid1 != $uuid2 ) {
+				// 切换公众号需要重新认证
+				$c = $this->request->controller();
+				if ( $c == 'Student' or $c == 'Feedback' or $c == 'Comment' or $c == 'Task' or $c == 'Report' ) {
+					//Log::instance()->add(Log::DEBUG, 'wx_auth');
+					Session::instance()->set('callback_url', '/'.$this->request->controller().'/'.$this->request->action().'/');
+					$this->wx_auth();
+					return;
+				}
 			}
 		}
 		
