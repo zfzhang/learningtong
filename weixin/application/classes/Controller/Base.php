@@ -48,16 +48,25 @@ class Controller_Base extends Controller {
 		
 		$this->init_agency();
 		if ( $this->request->action() != 'wx_login' and empty($this->auth->wx_openid) ) {
+			$need_auth = false;
+			
+			// 切换公众号需要重新认证
 			if ( $uuid1 and $uuid2 and $uuid1 != $uuid2 ) {
-				// 切换公众号需要重新认证
-				$c = $this->request->controller();
-				if ( $c == 'Student' or $c == 'Feedback' or $c == 'Comment' or $c == 'Task' or $c == 'Report' ) {
-					//Log::instance()->add(Log::DEBUG, 'wx_auth');
-					Session::instance()->set('callback_url', '/'.$this->request->controller().'/'.$this->request->action().'/');
-					$this->wx_auth();
-					return;
-				}
+				$need_auth = true;
 			}
+			
+			// 访问需要权限的页面也需要认证
+			$c = $this->request->controller();
+			if ( $c == 'Student' or $c == 'Feedback' or $c == 'Comment' or $c == 'Task' or $c == 'Report' ) {
+				$need_auth = true;
+			}
+			
+			if ( $need_auth ) {
+				Session::instance()->set('callback_url', '/'.$this->request->controller().'/'.$this->request->action().'/');
+				$this->wx_auth();
+				return;
+			}
+			
 		}
 		
 		$this->pagenav = new Pagenav;
