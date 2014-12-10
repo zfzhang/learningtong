@@ -190,6 +190,13 @@ class Controller_Base extends Controller {
 			echo '</pre>';
 			exit;
 		}
+		
+		if ( empty($result['openid']) or empty($result['access_token']) ) {
+			echo '<pre>';
+			print_r($result);
+			echo '</pre>';
+			exit;
+		}
 
 		$r1 = $this->auto_login( $result['openid'] );
 		$r2 = $this->save_wx_userinfo( $result['openid'], $result['access_token'] );
