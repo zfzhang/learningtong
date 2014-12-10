@@ -474,6 +474,7 @@ class Controller_Base extends Controller {
 			->from('wx_students')
 			->join('students')
 			->on('wx_students.student_id', '=', 'students.id')
+			->where('students.agency_id', '=', $this->auth->agency_id)
 			->where('wx_students.wx_openid', '=', $this->auth->wx_openid)
 			->execute()
 			->as_array();

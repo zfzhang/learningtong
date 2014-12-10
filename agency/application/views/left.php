@@ -19,10 +19,15 @@
 									<li <?php echo ($active=="knowledge") ? 'class="active"' : '';?> >
 										<a href="<?php echo URL::base(NULL, TRUE)?>article/list/">-知识分享</a>
 									</li>
-									
+									<?php if ( !isset($less_func) or $less_func == 0 ) : ?>
 									<li <?php echo ($active=="class") ? 'class="active"' : '';?> >
 										<a href="<?php echo URL::base(NULL, TRUE)?>class/list/">-课程介绍</a>
 									</li>
+									<?php else:?>
+									<li <?php echo ($active=="dailynews") ? 'class="active"' : '';?> >
+										<a href="<?php echo URL::base(NULL, TRUE)?>dailynews/list/">-每日讯息</a>
+									</li>
+									<?php endif;?>
 								</ul>
 							</li>
 							<?php if ( !isset($less_func) or $less_func == 0 ) : ?>
