@@ -192,7 +192,7 @@ class Controller_Base extends Controller {
 		}
 		
 		if ( empty($result['openid']) or empty($result['access_token']) ) {
-			echo '<pre>';
+			echo 'wx error:<pre>';
 			print_r($result);
 			echo '</pre>';
 			exit;
