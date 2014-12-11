@@ -47,7 +47,7 @@ class Controller_Base extends Controller {
 		$uuid2 = Session::instance()->get('uuid');
 		
 		$this->init_agency();
-		if ( $this->request->action() != 'wx_login' and empty($this->auth->wx_openid) ) {
+		if ( $this->request->action() != 'wx_login' ) {
 			$need_auth = false;
 			
 			// 切换公众号需要重新认证
@@ -55,10 +55,12 @@ class Controller_Base extends Controller {
 				$need_auth = true;
 			}
 			
-			// 访问需要权限的页面也需要认证
-			$c = $this->request->controller();
-			if ( $c == 'Student' or $c == 'Feedback' or $c == 'Comment' or $c == 'Task' or $c == 'Report' ) {
-				$need_auth = true;
+			// 访问需要权限的页面需要认证
+			if ( empty($this->auth->wx_openid) ) {
+				$c = $this->request->controller();
+				if (  $c == 'Student' or $c == 'Feedback' or $c == 'Comment' or $c == 'Task' or $c == 'Report' ) {
+					$need_auth = true;
+				}
 			}
 			
 			if ( $need_auth ) {
