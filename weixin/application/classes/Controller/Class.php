@@ -18,7 +18,8 @@ class Controller_Class extends Controller_Base {
 		try {			
 			$list = DB::select('id','name')
 				->from('classes')
-				->where('agency_id', '=', $this->auth->agency_id);
+				->where('agency_id', '=', $this->auth->agency_id)
+				->where('status', '=', STATUS_NORMAL);
 			if ( $entity_id ) {
 				$list->where('entity_id', '=', $entity_id);
 			}
