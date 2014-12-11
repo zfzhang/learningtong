@@ -23,6 +23,7 @@ class Controller_Course extends Controller_Base {
 				->from('courses')
 				->where('agency_id', '=', $this->auth->agency_id)
 				->where('class_id', '=', $class_id)
+				->where('status', '=', STATUS_NORMAL)
 				->execute()
 				->as_array();
 				
