@@ -170,6 +170,10 @@ class Controller_Base extends Controller {
 		curl_setopt($ch, CURLOPT_HEADER, 0);
 		//执行并获取HTML文档内容
 		$jsonStr = curl_exec($ch);
+		
+		$curl_errno = curl_errno( $ch );
+		$curl_info  = curl_getinfo( $ch );
+		
 		//释放curl句柄
 		curl_close($ch);
 		
@@ -195,6 +199,17 @@ class Controller_Base extends Controller {
 			echo 'wx error:<pre>';
 			print_r($result);
 			echo '</pre>';
+			
+			echo 'data:<pre>';
+			print_r($data);
+			echo '</pre>';
+			
+			echo '<br/>curl_errno: ',$curl_errno,'<br/>';
+			
+			echo 'curl_info:<pre>';
+			print_r($curl_info);
+			echo '</pre>';
+			
 			exit;
 		}
 
