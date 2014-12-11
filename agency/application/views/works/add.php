@@ -148,11 +148,6 @@
 	</body>
 </html>
 <script type="text/javascript" charset="utf-8">
-	window.onload = function() {
-		document.getElementById("sidebar").style.minHeight = document.getElementById("main").clientHeight - document.getElementById("header").clientHeight - 3 + 'px';
-	}
-</script>
-<script type="text/javascript" charset="utf-8">
 $(function(){
 	$('#btnSubmit').click(function () {
 		$('#data-form').submit();
@@ -193,4 +188,9 @@ $(function(){
 	//通过$.Tipmsg扩展默认提示信息;
 	//$.Tipmsg.w["zh1-6"]="请输入1到6个中文字符！";
 })
+</script>
+<script type="text/javascript" charset="utf-8">
+	window.onload = function() {
+		document.getElementById("sidebar").style.minHeight = document.getElementById("main").clientHeight - document.getElementById("header").clientHeight - 3 + 'px';
+	}
 </script>
