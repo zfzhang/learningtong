@@ -48,7 +48,7 @@
 									<span class="m-name">
 										名称：
 									</span>
-									<input type="text" style="width: 477px;" name="realname" id="realname" datatype="zh2-4"/>
+									<input type="text" style="width: 477px;" name="realname" id="realname" datatype="zh2-4"errormsg="请填写2-4个中文字的中文名！"/>
 								</li>
 								<li style="width:100%">
 									<span class="m-name">
@@ -143,6 +143,10 @@ $(function(){
 		tiptype:3,
 		label:".label",
 		showAllError:true,
+		datatype:{
+			"zh1-6":/^[\u4E00-\u9FA5\uf900-\ufa2d]{1,6}$/
+		},
+
 	});
 	
 	//通过$.Tipmsg扩展默认提示信息;

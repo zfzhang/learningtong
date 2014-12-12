@@ -33,7 +33,7 @@
 							<div class="accountSettings-title">
 							条件检索
 						</div>
-						<div class="accountSettings-box">
+						<div class="seach-accountSettings-box">
 							<ul>
 								<li>
 									<span class="m-name">
