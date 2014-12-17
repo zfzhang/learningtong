@@ -14,7 +14,7 @@
 		    }
 		  </style>
 		<![endif]-->
-        <script type="text/javascript" charset="utf-8" src="<?php echo URL::base()?>js/jquery-1.4.4.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="<?php echo URL::base()?>js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" charset="utf-8" src="<?PHP echo URL::base()?>js/Validform_v5.3.2.js"></script>
 	</head>
 
@@ -121,6 +121,11 @@
 
 </html>
 <script type="text/javascript" charset="utf-8">
+	window.onload = function() {
+		document.getElementById("sidebar").style.minHeight = document.getElementById("main").clientHeight - document.getElementById("header").clientHeight - 3 + 'px';
+	}
+</script>
+<script type="text/javascript" charset="utf-8">
 $(function(){
 	/*
 	$('input[type=checkbox]').each(function(){
@@ -152,9 +157,4 @@ $(function(){
 	//通过$.Tipmsg扩展默认提示信息;
 	//$.Tipmsg.w["zh1-6"]="请输入1到6个中文字符！";
 })
-</script>
-<script type="text/javascript" charset="utf-8">
-	window.onload = function() {
-		document.getElementById("sidebar").style.minHeight = document.getElementById("main").clientHeight - document.getElementById("header").clientHeight - 3 + 'px';
-	}
 </script>

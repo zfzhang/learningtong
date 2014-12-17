@@ -123,6 +123,13 @@ $(function(){
 </script>
 <script type="text/javascript">
 var this_url = window.location.href;
+if ( this_url.indexOf('uuid') == -1 ) {
+	if ( this_url.indexOf('?') == -1 ) {
+		this_url += '?uuid=<?php echo $uuid?>';
+	} else {
+		this_url += '&uuid=<?php echo $uuid?>';
+	}
+}
 var imgUrl      = "";
 var lineLink    = this_url;
 var descContent = '学生作品';

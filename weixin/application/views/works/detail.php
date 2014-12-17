@@ -42,6 +42,13 @@
 <script src="<?PHP echo URL::base()?>js/setheight.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 var this_url = window.location.href;
+if ( this_url.indexOf('uuid') == -1 ) {
+	if ( this_url.indexOf('?') == -1 ) {
+		this_url += '?uuid=<?php echo $uuid?>';
+	} else {
+		this_url += '&uuid=<?php echo $uuid?>';
+	}
+}
 var imgUrl      = "";
 var lineLink    = this_url;
 var descContent = '';
