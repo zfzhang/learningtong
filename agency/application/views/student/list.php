@@ -14,6 +14,7 @@
 		  </style>
 		<![endif]-->
 		<script type="text/javascript" charset="utf-8" src="<?PHP echo URL::base()?>js/jquery-2.1.1.min.js"></script>
+        <style>.tbl {table-layout:fixed}.td {overflow:hidden;text-overflow:ellipsis}</style>
 	</head>
 
 	<body>
@@ -145,7 +146,7 @@
 							<button id="btnSearch" style="margin-left: 0;margin-top: 10px;">搜索</button>
 						</div>
 						<div class="table-cell">
-							<table border="1" cellspacing="0" cellpadding="0">
+							<table border="1" cellspacing="0" cellpadding="0" class="tbl">
 							  <tr>
 								<th>序号</th>
 								<th>姓名</th>
@@ -181,8 +182,8 @@
 										?>
 									</td>
 									<?php if ( $signup != 'adult' ) : ?>
-									<td><?php echo $v['grade']?></td>
-									<td><?php echo $v['school']?></td>
+									<td class="td" nowrap><?php echo $v['grade']?></td>
+									<td class="td" nowrap><?php echo $v['school']?></td>
 									<?php endif?>
 									<td><?php echo $v['mobile']?></td>
 									<?php if ( $signup != 'adult' ) : ?>
@@ -191,7 +192,7 @@
 									<td><?php echo $v['mother_name']?></td>
 									<td><?php echo $v['mother_mobile']?></td>
 									<?php endif?>
-									<td><?php echo @implode('<br/>', $student_classes[$v['id']])?></td>
+									<td class="td" nowrap><span title="<?php echo @implode(';', $student_classes[$v['id']])?>"><?php echo @implode(';', $student_classes[$v['id']])?></span></td>
 									<td>
 										<a href="<?php echo URL::base(NULL, TRUE)?>student/edit/?id=<?php echo $v['id']?>">编辑</a>
 									</td>

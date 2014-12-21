@@ -1,3 +1,4 @@
+<style>.tbl {table-layout:fixed}.td {overflow:hidden;text-overflow:ellipsis}</style>
 <div class="content-inner">
 	<div class="theme-poptit">
 		<a href="javascript:;" title="关闭" class="close">×</a>
@@ -61,7 +62,7 @@
 		<button style="margin-left: 0;margin-top: 10px;" id="btnSearchStudent_Pop">搜索</button>
 	</div>
 	<div class="table-cell">
-		<table border="1" cellspacing="0" cellpadding="0">
+		<table border="1" cellspacing="0" cellpadding="0" class="tbl">
 			<tr><th>序号</th><th>姓名</th><th>性别</th><th>所在学校</th><th>所在年级</th><th>机构班别</th><th>操作</th></tr>
 			<?php $idx = $list_offset + 1;?>
 			<?php foreach ( $items as $v ):?>
@@ -79,9 +80,9 @@
 					}					
 					?>
 				</td>
-				<td><?php echo $v['school']?></td>
-				<td><?php echo $v['grade']?></td>
-				<td><?php echo @implode('<br/>', $student_classes[$v['id']])?></td>
+				<td class="td" nowrap><?php echo $v['school']?></td>
+				<td class="td" nowrap><?php echo $v['grade']?></td>
+				<td class="td" nowrap><span title="<?php echo @implode(';', $student_classes[$v['id']])?>"><?php echo @implode(';', $student_classes[$v['id']])?></span></td>
 				<td>
 					<a href="#" onclick="select_for_audit(<?php echo $v['id']?>)">选择</a>
 				</td>
