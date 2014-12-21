@@ -102,7 +102,7 @@
                                         <?php foreach ( $courses as $v ) : ?>
 										<input type="checkbox" class="course course_<?php echo $v['id']?>" style="width: 15px;margin-left: 10px;" name="course[]" value="<?php echo $v['id']?>" datatype="*" />
 										<lable style="margin-left: 5px; margin-right:15px; line-height: 30px;float:left;" class="course course_<?php echo $v['id']?>">
-											<?php echo $v['name']?>
+											<?php echo $v['class'],'-',$v['name']?>
 										</lable>
 										<?php endforeach?>
                                         </div>

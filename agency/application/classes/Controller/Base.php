@@ -214,10 +214,12 @@ class Controller_Base extends Controller {
 	{
 		$courses = array();
 		
-		$items = DB::select('id', 'name', 'class_id')
+		$items = DB::select('courses.id', 'courses.name', 'courses.class_id', array('classes.name', 'class'))
 			->from('courses')
-			->where('agency_id', '=', $this->auth->agency_id)
-			->where('status', '=', STATUS_NORMAL)
+			->join('classes')
+			->on('courses.class_id', '=', 'courses.id')
+			->where('courses.agency_id', '=', $this->auth->agency_id)
+			->where('courses.status', '=', STATUS_NORMAL)
 			->execute()
 			->as_array();
 		foreach ( $items as $v ) {
