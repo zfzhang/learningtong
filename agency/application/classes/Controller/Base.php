@@ -216,7 +216,7 @@ class Controller_Base extends Controller {
 		
 		$items = DB::select('courses.id', 'courses.name', 'courses.class_id', array('classes.name', 'class'))
 			->from('courses')
-			->join('classes')
+			->join('classes', 'left')
 			->on('courses.class_id', '=', 'courses.id')
 			->where('courses.agency_id', '=', $this->auth->agency_id)
 			->where('courses.status', '=', STATUS_NORMAL)
