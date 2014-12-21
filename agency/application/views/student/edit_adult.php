@@ -107,11 +107,12 @@
 								</li>
 								<li>
 										 <span class="m-name">报名班别：</span>
-										<div style="background:#dddddd; width:600px; padding:10px;border:1px dashed #a5a5a5;float:left;">
+										<div style="background:#dddddd; width:700px; padding:10px;border:1px dashed #a5a5a5;float:left;">
 										<?php foreach ( $courses as $v ) : ?>
-										<input type="checkbox" class="course course_<?php echo $v['id']?>" style="width: 15px;margin-left: 10px;" name="course[]" value="<?php echo $v['id']?>" datatype="*"
+										
+										<lable style="margin-left: 5px; margin-right:15px; line-height: 30px;float:left;width:200px;" class="course course_<?php echo $v['id']?>">
+                                        <input type="checkbox" class="course course_<?php echo $v['id']?>" style="width: 15px;margin-left: 10px;" name="course[]" value="<?php echo $v['id']?>"
 											<?php if ( isset($student_courses[$v['id']]) ) { echo 'checked="checked"'; } ?> />
-										<lable style="margin-left: 5px; margin-right:15px; line-height: 30px;float:left;" class="course course_<?php echo $v['id']?>">
 											<?php echo $v['class'],'-',$v['name']?>
 										</lable>
 										<?php endforeach?>
