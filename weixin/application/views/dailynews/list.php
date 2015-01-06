@@ -22,7 +22,7 @@
 			<ul id="list-box" class="mui-table-view mui-table-view-striped mui-table-view-condensed" style="margin-top: 0;">
 				<?php foreach ( $items as $v ) : ?>
 				<li class="mui-table-view-cell">
-					<a href="<?php echo URL::base(NULL, TRUE),'dailynews/detail/?id=',$v['id']?>">
+					<a href="<?php echo URL::base(NULL, TRUE),'dailynews/detail/?id=',$v['id'],'&uuid=',$uuid?>">
 					<div class="mui-table">
 						<div class="mui-table-cell mui-col-xs-9">
 							<h4 class="mui-ellipsis"><?php echo $v['title']?></h4>
@@ -67,7 +67,7 @@ $(function(){
 					var list = $.parseJSON(jsonStr);
 					$.each(list, function (k, v) {
 						var li = '<li class="mui-table-view-cell">';
-						li += '<a href="' + base_url + '/detail?id=' + v.id + '">';
+						li += '<a href="' + base_url + '/detail?id=' + v.id + '&uuid=<?php echo $uuid?>">';
 						li += '<div class="mui-table">';
 						li += '<div class="mui-table-cell mui-col-xs-10">';
 						li += '	<h4 class="mui-ellipsis">' + v.title + '</h4>';

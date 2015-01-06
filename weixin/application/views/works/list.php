@@ -26,7 +26,7 @@
 					</div>
 					<?php foreach ( $images as $v ) : ?>
 					<div class="mui-slider-item">
-						<a href="<?php echo URL::base(NULL, TRUE),'works/detail/?id=',$v['id']?>">
+						<a href="<?php echo URL::base(NULL, TRUE),'works/detail/?id=',$v['id'],'&uuid=',$uuid?>">
 							<img src="<?php echo $v['img']?>">
 							<p class="mui-slider-title"><?php echo $v['title']?></p>
 						</a>
@@ -57,7 +57,7 @@
 					</li>
 					<?php foreach ( $items as $v ) : ?>
 					<li class="mui-table-view-cell mui-media">
-						<a href="<?php echo URL::base(NULL, TRUE),'works/detail/?id=',$v['id']?>">
+						<a href="<?php echo URL::base(NULL, TRUE),'works/detail/?id=',$v['id'],'&uuid=',$uuid?>">
 							<div class="mui-media-body mui-ellipsis">
 								【<?php echo $students_courses[$v['student_id']]?>】
 								<?php echo $v['student']?>同学的作品
@@ -101,7 +101,7 @@ $(function(){
 					var list = $.parseJSON(jsonStr);
 					$.each(list, function (k, v) {
 						var li = '<li class="mui-table-view-cell">';
-						li += '<a href="' + base_url + '/detail?id=' + v.id + '">';
+						li += '<a href="' + base_url + '/detail?id=' + v.id + '&uuid=<?php echo $uuid?>">';
 						li += '<div class="mui-media-body mui-ellipsis">';
 						li += '【' + v.class + '】';
 						li += v.student + '同学的作品';

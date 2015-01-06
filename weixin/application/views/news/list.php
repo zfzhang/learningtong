@@ -110,7 +110,7 @@ $(function(){
 					var jsonObj = $.parseJSON(jsonStr);
 					$.each(jsonObj, function (k, v) {
 						var s = '<li class="mui-table-view-cell mui-media">';
-						s += '<a href="' + base_url + '/detail?id=' + v.id + '">';
+						s += '<a href="' + base_url + '/detail?id=' + v.id + '&uuid=<?php echo $uuid?>">';
 						
 						if ( $.trim(v.img) != '' ) {
 							s += '<img class="mui-media-object mui-pull-left" src="' + v.img + '">';
