@@ -26,7 +26,7 @@
 					</div>
 					<?php foreach ( $images as $v ) : ?>
 					<div class="mui-slider-item">
-						<a href="<?php echo URL::base(NULL, TRUE),'works/detail/?id=',$v['id']?>">
+						<a href="<?php echo URL::base(NULL, FALSE),'works/detail/?id=',$v['id']?>">
 							<img src="<?php echo $v['img']?>">
 							<p class="mui-slider-title"><?php echo $v['title']?></p>
 						</a>
@@ -79,7 +79,7 @@
 <script src="<?PHP echo URL::base()?>js/setheight.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 $(function(){
-	var base_url  = '<?PHP echo URL::base(NULL, TRUE)?>/works';
+	var base_url  = '<?PHP echo URL::base(NULL, FALSE)?>/works';
 	var cur_page  = '<?php echo $page?>'; cur_page = parseInt(cur_page);
 	var scrollEnd = true;
 	
