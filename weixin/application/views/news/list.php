@@ -27,7 +27,7 @@
 					</div>
 					<?php foreach ( $images as $v ) : ?>
 					<div class="mui-slider-item">
-						<a href="<?php echo URL::base(NULL, TRUE),'news/detail/?id=',$v['id']?>">
+						<a href="<?php echo URL::base(NULL, TRUE),'news/detail/?id=',$v['id'],'&uuid=',$uuid?>">
 							<img src="<?php echo $v['img']?>">
 							<p class="mui-slider-title"><?php echo $v['title']?></p>
 						</a>
