@@ -5,6 +5,15 @@ class Controller_Agency extends Controller_Base
 	
 	public function action_index()
 	{
+		if ( isset($_GET['redirect']) ) {
+			$redirect = '/' . str_replace('-', '/', $_GET['redirect']);
+			$uuid = isset($_GET['uuid']) ? $_GET['uuid'] : '';
+			$id   = isset($_GET['id']) ? $_GET['id'] : '';
+			$url  = $redirect . '?uuid=' . $uuid . '&id=' . $id;
+			header("location:$url");
+			exit;
+		}
+		
 		$items = DB::select('*')
 			->from('introductions')
 			->where('agency_id', '=', $this->auth->agency_id)
