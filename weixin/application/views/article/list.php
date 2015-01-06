@@ -22,7 +22,7 @@
 			<ul id="list-box" class="mui-table-view mui-table-view-striped mui-table-view-condensed" style="margin-top: 0;">
 				<?php foreach ( $items as $v ) : ?>
 				<li class="mui-table-view-cell">
-					<a href="<?php echo URL::base(NULL, FALSE),'?redirect=article-detail&id=',$v['id'],'&uuid=',$uuid?>">
+					<a href="<?php echo URL::base(NULL, TRUE),'article/detail/?id=',$v['id']?>">
 					<div class="mui-table">
 						<div class="mui-table-cell mui-col-xs-9">
 							<h4 class="mui-ellipsis"><?php echo $v['title']?></h4>
@@ -45,7 +45,7 @@
 <script src="<?PHP echo URL::base()?>js/setheight.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
 $(function(){
-	var base_url  = '<?PHP echo URL::base(NULL, FALSE)?>/article';
+	var base_url  = '<?PHP echo URL::base(NULL, TRUE)?>/article';
 	var cur_page  = '<?php echo $page?>'; cur_page = parseInt(cur_page);
 	var scrollEnd = true;
 	
