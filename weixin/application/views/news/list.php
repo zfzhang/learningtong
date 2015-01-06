@@ -57,7 +57,7 @@
 					</li>
 					<?php foreach ( $items as $v ) : ?>
 					<li class="mui-table-view-cell mui-media">
-						<a href="<?php echo URL::base(NULL, TRUE),'news/detail/?id=',$v['id']?>">
+						<a href="<?php echo URL::base(NULL, TRUE),'news/detail/?id=',$v['id'],'&uuid=',$uuid?>">
 							<?php if ( $v['img'] ) : ?>
 							<img class="mui-media-object mui-pull-left" src="<?php echo $v['img']?>">
 							<?php endif?>
