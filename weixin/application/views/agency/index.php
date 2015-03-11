@@ -18,10 +18,10 @@
 				<a class="mui-control-item mui-active">
 					简介
 				</a>
-				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/show/" class="mui-control-item">
+				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/show?uuid=<?php echo $uuid?>" class="mui-control-item">
 					展示
 				</a>
-				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/contact/" class="mui-control-item">
+				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/contact?uuid=<?php echo $uuid?>" class="mui-control-item">
 					联系
 				</a>
 				</div>

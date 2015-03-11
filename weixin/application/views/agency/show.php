@@ -36,7 +36,7 @@
 	<body class="bg-white">
 		<div class="mui-content">
 			<div id="segmentedControl" class="mui-segmented-control" style="margin: 0 auto;width: 96%;margin-top: 10px;">
-				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/index/" class="mui-control-item">
+				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/index?uuid=<?php echo $uuid?>" class="mui-control-item">
 
 					简介
 
@@ -46,7 +46,7 @@
 					展示
 
 				</a>
-				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/contact/" class="mui-control-item">
+				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/contact?uuid=<?php echo $uuid?>" class="mui-control-item">
 
 					联系
 

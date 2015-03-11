@@ -16,10 +16,10 @@
 	<body class="bg-white">
 		<div class="mui-content" id="mui-content">
 			<div id="segmentedControl" class="mui-segmented-control" style="margin: 0 auto;width: 96%;margin-top: 10px;">
-				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/index/" class="mui-control-item">
+				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/index?uuid=<?php echo $uuid?>" class="mui-control-item">
 					简介
 				</a>
-				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/show/" class="mui-control-item">
+				<a href="<?PHP echo URL::base(NULL, TRUE)?>agency/show?uuid=<?php echo $uuid?>" class="mui-control-item">
 					展示
 				</a>
 				<a class="mui-control-item mui-active">
@@ -45,11 +45,10 @@ if ( this_url.indexOf('uuid') == -1 ) {
 		this_url += '&uuid=<?php echo $uuid?>';
 	}
 }
-
+var descContent = '点击打开了解详细信息';
+var shareTitle  = '<?php echo $agency_name?>联系方式';
 var imgUrl      = "";
 var lineLink    = this_url;
-var descContent = '联系方式';
-var shareTitle  = '<?php echo $agency_name?>联系方式';
 var appid       = '';
         
 
@@ -111,3 +110,5 @@ $(function () {
 
 
 </script>
+
+

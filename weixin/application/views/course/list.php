@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title><?php echo $agency_name?> | 课程介绍</title>
+		<title><?php echo $agency_name?> | <?php echo $class['name']?>课程介绍</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -92,7 +92,4 @@ function signup( course_id )
 {
 	window.location.href = '<?php echo URL::base("http", true)?>guest/signup/?course_id=' + course_id;
 }
-document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {  
-WeixinJSBridge.call('hideOptionMenu');  
-});
 </script>

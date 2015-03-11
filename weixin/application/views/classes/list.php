@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>课程类别</title>
+		<title><?php echo $agency_name?> | 课程类别</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -64,7 +64,7 @@
 			<div class="course">
 				<?php foreach ( $items as $v ) : ?>
 				<div class="course-box">
-					<a href="<?php echo URL::base(NULL, TRUE),'course/list/?class_id=',$v['id'],'&for=',$for?>">
+					<a href="<?php echo URL::base(NULL, TRUE),'course/list/?class_id=',$v['id'],'&uuid=',$uuid?>">
 						<?php echo $v['name']?>
 					</a>
 				</div>
